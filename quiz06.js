@@ -23,6 +23,35 @@ console.log(userBCart);
 
 
 /*
+왜 인지 모르겠지만, 
+var copyObjectDeep = function(target) {
+	var result = {};
+	if (typeof target === 'object' && target !== null) {
+		for (var prop in target) {
+			result[prop] = copyObjectDeep(target[prop]);
+		}
+	} else {
+		result = target;
+	}
+	return result;
+}
+const userBCart = copyObjectDeep(userACart);
+
+이 코드를 사용하면 forEach에서
+cart.items.forEach((item) => {
+             ^
+TypeError: cart.items.forEach is not a function
+    at applycoupon (C:\Users\usuny\24부트캠프\달리기반\sparta09_js_running_day01\quiz06.js:5:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1157:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+
+    라는 오류가 발생한다.
+*/
+
+
+/*
 
 1.	실행 결과로 userACart.items와 userBCart.items는 각각 어떻게 달라져 있을까요?
     Acart, Bcart둘 다 키보드 price : 25000, 마우스 price : 15000이 됩니다.
