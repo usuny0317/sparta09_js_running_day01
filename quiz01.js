@@ -1,9 +1,8 @@
 let uninitialized;
 console.log(uninitialized);
 
-/* 
-선언만 하고 할당을 하지 않았기에 undefined가 콘솔에 찍힐 것 같습니다.
-*/
+//선언만 하고 할당을 하지 않았기에 undefined가 콘솔에 찍힐 것 같습니다.
+
 
 
 let apple = "사과";
@@ -25,6 +24,8 @@ console.log(lotto[3]);
 
 let mySchedule = "";
 console.log(mySchedule || false); // < false > 빈 값이랑 false 를 or 연산한 것이기에 false
-console.log(!!mySchedule); // < true > 빈 값 false의 not 연산해서 true
+console.log(!!mySchedule); 
+// < true > 빈 값 false의 not 연산해서 true // 틀렷음!!!!
+// not 연산이 아닌 것 같다. not not 인건가.. 그렇다면 false가 맞다!
 
 
