@@ -1,4 +1,5 @@
 
+//import calc from "./quiz04";
 let scores = [36, 62, 72, 55, 86, 95, 92, 48, 81];
 
 function calc(num1, yun, num2) {

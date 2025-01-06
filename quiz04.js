@@ -1,5 +1,3 @@
-import { type } from "express/lib/response";
-
 function calc(num1, yun, num2) {
     // 코드를 작성해주세요.
     if(yun==="+"){
@@ -25,6 +23,4 @@ function calc(num1, yun, num2) {
   calc(6, "*", 3); // 결과값 18
   calc(15, "/", 3); // 결과값 5
 
-  export {calc}
-
-  {type : module}
+  //export default calc 안되는 구만..
