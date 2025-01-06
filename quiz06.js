@@ -27,19 +27,10 @@ const userACart = {
 };
 
 const userBCart = copyObjectDeep(userACart);
-/*
-const userBCart = {
-    items: [
-        { name: userACart.items[0].name, price: userACart.items[0].price },
-        { name: userACart.items[1].name, price: userACart.items[1].price },
-        ],
-    }
-*/ 
-
-console.log(`변화 전: ${userBCart}`);
+console.log(userBCart);
 const coupon = { discount: 5000 };
 applycoupon(userBCart, coupon);
-console.log(`변화 후: ${userBCart}`);
+console.log(userBCart);
 
 
 /*
