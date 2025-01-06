@@ -15,7 +15,7 @@ const userACart = {
   ],
 };
 
-const userBCart = JSON.parse(JSON.stringify(userACart));
+const userBCart = JSON.parse(JSON.stringify(userACart)); //parse 다시 객체롤 묶어주기, stringify 다 뜯어서 하나씩 봐주기
 console.log(userBCart);
 const coupon = { discount: 5000 };
 applycoupon(userBCart, coupon);
