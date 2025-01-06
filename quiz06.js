@@ -7,17 +7,6 @@ function applycoupon(cart, coupon) {
   });
 };
 
-var copyObjectDeep = function(target) {
-	var result = {};
-	if (typeof target === 'object' && target !== null) {
-		for (var prop in target) {
-			result[prop] = copyObjectDeep(target[prop]);
-		}
-	} else {
-		result = target;
-	}
-	return result;
-}
 
 const userACart = {
   items: [
@@ -26,7 +15,7 @@ const userACart = {
   ],
 };
 
-const userBCart = copyObjectDeep(userACart);
+const userBCart = JSON.parse(JSON.stringify(userACart));
 console.log(userBCart);
 const coupon = { discount: 5000 };
 applycoupon(userBCart, coupon);
@@ -47,6 +36,7 @@ console.log(userBCart);
     1. 직접 지정하거나(얕은 복사) 
     2. A차트의 값을 이용해서 복사하는 것과(깊은 복사라고 보기 어렵다!)
     3. 복사하는 함수를 만들어 깊은 복사하는 것으로 해결할 수 있습니다. 
+    (재귀적으로 반복하는 것이 있고 JSON.parse(JSON.stringify(userACart));를 사용하여 모두 풀고 다시 작성할 수 있습니다.)
     1. 
     const userBCart = {
         items: [
